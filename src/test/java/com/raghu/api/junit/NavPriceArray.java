@@ -19,10 +19,6 @@ public class NavPriceArray {
 
     @JsonProperty
     MeasureType measureType;
-    /*
-    public class MeasureType {
-    };
-    */
 
     @JsonProperty
     double percentChange;
@@ -32,23 +28,14 @@ public class NavPriceArray {
 
     @JsonProperty
     PricePeriodType pricePeriodType;
-    /*
-    public class PricePeriodType {
-    };
-    */
 
     @JsonProperty
     PriceStatusType priceStatusType;
-    /*
-    public class priceStatusType {
-    };
-    */
 
     @JsonProperty
      Yield yield;
 
     @JsonProperty
-    //@SerializedName("final")
     boolean Final;
 
     public double getAmountChange() {

@@ -6,7 +6,6 @@ public class NavPriceList {
     @JsonProperty
     String portId;
 
-    //NavPriceArray[] navPriceArray = new NavPriceArray[10];
     @JsonProperty
     NavPriceArray[] navPriceArray;
 
