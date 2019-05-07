@@ -33,28 +33,33 @@ public class ApiTest {
 
 		//Assert that all mandatory fields exists
 		for (NavPriceList priceList : navPriceLists) {
+
 			Assert.assertNotNull(priceList.getPortId());
 
-			Assert.assertNotNull(priceList.navPriceArray[0].getAmountChange());
-			Assert.assertNotNull(priceList.navPriceArray[0].getAsOfDate());
-			Assert.assertNotNull(priceList.navPriceArray[0].getIsFinal());
-			Assert.assertNotNull(priceList.navPriceArray[0].getPercentChange());
-			Assert.assertNotNull(priceList.navPriceArray[0].getPrice());
-			//Assert.assertNotNull(item.navPriceArray[0].yield); This can be null sometimes
-			Assert.assertNotNull(priceList.navPriceArray[0].getFinal());
+			for (NavPriceArray navPriceArray : priceList.navPriceArray) {
 
-			Assert.assertNotNull(priceList.navPriceArray[0].currency.getCurrencyCode());
-			Assert.assertNotNull(priceList.navPriceArray[0].currency.getCurrencyLocation());
-			Assert.assertNotNull(priceList.navPriceArray[0].currency.getCurrencySymbol());
+				Assert.assertNotNull(navPriceArray.getAmountChange());
+				Assert.assertNotNull(navPriceArray.getAsOfDate());
+				Assert.assertNotNull(navPriceArray.getIsFinal());
+				Assert.assertNotNull(navPriceArray.getPercentChange());
+				Assert.assertNotNull(navPriceArray.getPrice());
+				//Assert.assertNotNull(navPriceArray.yield); This can be null sometimes
+				Assert.assertNotNull(navPriceArray.getFinal());
 
-			Assert.assertNotNull(priceList.navPriceArray[0].measureType.getMeasureCode());
-			Assert.assertNotNull(priceList.navPriceArray[0].measureType.getMeasureDesc());
+				Assert.assertNotNull(navPriceArray.currency.getCurrencyCode());
+				Assert.assertNotNull(navPriceArray.currency.getCurrencyLocation());
+				Assert.assertNotNull(navPriceArray.currency.getCurrencySymbol());
 
-			Assert.assertNotNull(priceList.navPriceArray[0].pricePeriodType.getPricePeriodCode());
-			Assert.assertNotNull(priceList.navPriceArray[0].pricePeriodType.getPricePeriodDesc());
+				Assert.assertNotNull(navPriceArray.measureType.getMeasureCode());
+				Assert.assertNotNull(navPriceArray.measureType.getMeasureDesc());
 
-			Assert.assertNotNull(priceList.navPriceArray[0].priceStatusType.getPriceStatusCode());
-			Assert.assertNotNull(priceList.navPriceArray[0].priceStatusType.getPriceStatusDesc());
+				Assert.assertNotNull(navPriceArray.pricePeriodType.getPricePeriodCode());
+				Assert.assertNotNull(navPriceArray.pricePeriodType.getPricePeriodDesc());
+
+				Assert.assertNotNull(navPriceArray.priceStatusType.getPriceStatusCode());
+				Assert.assertNotNull(navPriceArray.priceStatusType.getPriceStatusDesc());
+
+			}
 		}
 	}
 }
