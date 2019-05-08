@@ -6,37 +6,37 @@ import com.google.gson.annotations.SerializedName;
 
 public class NavPriceArray {
     @JsonProperty
-    double amountChange;
+    private double amountChange;
 
     @JsonProperty
-    String asOfDate;
+    private String asOfDate;
 
     @JsonProperty
-    Currency currency;
+    public Currency currency;
 
     @JsonProperty
-    boolean isFinal;
+    private boolean isFinal;
 
     @JsonProperty
-    MeasureType measureType;
+    public MeasureType measureType;
 
     @JsonProperty
-    double percentChange;
+    private double percentChange;
 
     @JsonProperty
-    double price;
+    private double price;
 
     @JsonProperty
-    PricePeriodType pricePeriodType;
+    public PricePeriodType pricePeriodType;
 
     @JsonProperty
-    PriceStatusType priceStatusType;
+    public PriceStatusType priceStatusType;
 
     @JsonProperty
-     Yield yield;
+    public Yield yield;
 
     @JsonProperty
-    boolean Final;
+    private boolean Final;
 
     public double getAmountChange() {
         return amountChange;

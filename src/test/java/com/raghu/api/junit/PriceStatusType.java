@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PriceStatusType {
     @JsonProperty
-    String priceStatusCode;
+    private String priceStatusCode;
 
     @JsonProperty
-    String priceStatusDesc;
+    private String priceStatusDesc;
 
     public String getPriceStatusCode() {
         return priceStatusCode;

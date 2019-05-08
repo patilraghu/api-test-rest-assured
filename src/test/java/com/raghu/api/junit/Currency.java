@@ -4,13 +4,13 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Currency {
     @JsonProperty
-    String currencyCode;
+    private String currencyCode;
 
     @JsonProperty
-    String currencyLocation;
+    private String currencyLocation;
 
     @JsonProperty
-    String currencySymbol;
+    private String currencySymbol;
 
     public String getCurrencyCode() {
         return currencyCode;

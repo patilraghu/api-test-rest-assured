@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class NavPriceList {
     @JsonProperty
-    String portId;
+    private String portId;
 
     @JsonProperty
-    NavPriceArray[] navPriceArray;
+    public NavPriceArray[] navPriceArray;
 
     public String getPortId(){
         return portId;

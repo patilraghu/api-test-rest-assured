@@ -4,10 +4,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class MeasureType {
     @JsonProperty
-    String measureCode;
+    private String measureCode;
 
     @JsonProperty
-    String measureDesc;
+    private String measureDesc;
 
     public String getMeasureCode() {
         return measureCode;
